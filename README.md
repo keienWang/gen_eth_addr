@@ -8,4 +8,7 @@
 
 下载依赖包
 1. go get github.com/ethereum/go-ethereum
+
 2. go get github.com/PuerkitoBio/goquery
+
+3. go build -o main.exe   main.go 
