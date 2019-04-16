@@ -41,7 +41,8 @@ func main() {
 		address := crypto.PubkeyToAddress(privateKeyECDSA.PublicKey)
 		addr := address.String()
 
-		fmt.Println("priv :", privateKeyECDSA.D.String(), "\t", "addr:", addr)
+		fmt.Printf("privateKey: %x",privateKeyECDSA.D.Bytes())
+		fmt.Println( "\taddr :", addr)
 		url := s + addr
 		resp, e := http.Get(url)
 		if e != nil {
@@ -64,7 +65,8 @@ func main() {
 					return
 				}
 				if u > 0.0 {
-					fmt.Println("pri: ", privateKeyECDSA.D.String(), "addr :", addr, "balance:", u)
+					fmt.Printf("privateKey: %x",privateKeyECDSA.D.Bytes())
+					fmt.Println( "\taddr :", addr, "balance:", u)
 					file.WriteString("pri: " + privateKeyECDSA.D.String() + "addr :" + addr + "\n")
 
 				} else {
@@ -79,8 +81,8 @@ func main() {
 							return
 						}
 						if u > 0 {
-							fmt.Println("pri: ", privateKeyECDSA.D.String(), "addr :", addr, "balance:", u, "txs:", selection.Text())
-							file.WriteString("pri: " + privateKeyECDSA.D.String() + "addr :" + addr + "\n")
+							//fmt.Println("pri: ", privateKeyECDSA.D.String(), "addr :", addr, "balance:", u, "txs:", selection.Text())
+							//file.WriteString("pri: " + privateKeyECDSA.D.String() + "addr :" + addr + "\n")
 						}
 					})
 				}
