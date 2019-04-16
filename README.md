@@ -12,3 +12,7 @@
 2. go get github.com/PuerkitoBio/goquery
 
 3. go build -o main.exe   main.go 
+
+
+
+如果找到余额大于0得账户，程序会创建文件，并保存私钥及地址
